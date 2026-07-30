@@ -53,9 +53,10 @@ img {
 
 .scroll-cue {
   position: absolute;
-  right: clamp(1.25rem, 4vw, 3.5rem);
+  left: 50%;
   bottom: 1.25rem;
   display: inline-flex;
+  transform: translateX(-50%);
   align-items: center;
   gap: 0.7rem;
   border: 1px solid rgba(23, 35, 29, 0.16);
@@ -430,8 +431,7 @@ img {
   }
 
   .scroll-cue {
-    right: auto;
-    left: 1.25rem;
+    left: 50%;
   }
 
   .site-header {
