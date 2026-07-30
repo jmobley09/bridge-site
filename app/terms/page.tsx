@@ -36,8 +36,8 @@ export default function TermsPage() {
         You can cancel SMS messages at any time by replying STOP. After you send
         STOP, we may send one confirmation message. Reply HELP for help, or
         contact us at{" "}
-        <a href="mailto:hello@bridgehomeschoolcoop.org">
-          hello@bridgehomeschoolcoop.org
+        <a href="mailto:info@bridgehsc.com">
+          info@bridgehsc.com
         </a>
         . Consent to receive SMS messages is not a condition of membership or
         purchase.
@@ -53,8 +53,8 @@ export default function TermsPage() {
       <h2>Contact</h2>
       <p>
         Questions about these terms may be sent to{" "}
-        <a href="mailto:hello@bridgehomeschoolcoop.org">
-          hello@bridgehomeschoolcoop.org
+        <a href="mailto:info@bridgehsc.com">
+          info@bridgehsc.com
         </a>
         .
       </p>

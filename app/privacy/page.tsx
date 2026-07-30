@@ -55,8 +55,8 @@ export default function PrivacyPage() {
       <h2>Contact</h2>
       <p>
         Questions about this policy may be sent to{" "}
-        <a href="mailto:hello@bridgehomeschoolcoop.org">
-          hello@bridgehomeschoolcoop.org
+        <a href="mailto:info@bridgehsc.com">
+          info@bridgehsc.com
         </a>
         .
       </p>

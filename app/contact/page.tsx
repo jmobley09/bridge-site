@@ -24,8 +24,8 @@ export default function ContactPage() {
             <div>
               <dt>Email</dt>
               <dd>
-                <a href="mailto:hello@bridgehomeschoolcoop.org">
-                  hello@bridgehomeschoolcoop.org
+                <a href="mailto:info@bridgehsc.com">
+                  info@bridgehsc.com
                 </a>
               </dd>
             </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
             Reply STOP to opt out or HELP for help. Consent to receive text
             messages is not required for membership.
           </p>
-          <a className="button-primary" href="mailto:hello@bridgehomeschoolcoop.org">
+          <a className="button-primary" href="mailto:info@bridgehsc.com">
             Ask about membership
           </a>
         </div>

@@ -16,7 +16,7 @@ const navItems = [
 ];
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bridgehomeschoolcoop.org"),
+  metadataBase: new URL("https://bridgehsc.com"),
   title: {
     default: "Bridge Homeschool Co-op",
     template: "%s | Bridge Homeschool Co-op",
