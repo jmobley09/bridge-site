@@ -22,8 +22,8 @@ const values = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[var(--cream)]">
-        <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:py-20">
+      <section className="hero-section relative overflow-hidden bg-[var(--cream)]">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-12 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:py-16">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--coral)]">
               Homeschooling in community
@@ -56,9 +56,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <a className="scroll-cue" href="#what-we-do" aria-label="Scroll to what we do">
+          <span>Explore what we do</span>
+          <span className="scroll-cue-mark" aria-hidden="true">
+            ↓
+          </span>
+        </a>
       </section>
 
-      <section className="bg-white px-6 py-16 sm:px-8 lg:py-20">
+      <section id="what-we-do" className="bg-white px-6 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="section-kicker">What we do</p>
