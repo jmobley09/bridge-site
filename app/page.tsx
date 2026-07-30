@@ -29,10 +29,10 @@ export default function Home() {
               Homeschooling in community
             </p>
             <h1 className="mt-5 text-5xl font-semibold leading-[0.98] text-[var(--ink)] sm:text-6xl lg:text-7xl">
-              Bridge Homeschool Co-op
+              Bridge Homeschool Community
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
-              A welcoming parent-led community where homeschool families learn
+              A welcoming parent-led co-op where homeschool families learn
               together, share their strengths, and build steady rhythms of
               connection for students of all ages.
             </p>
