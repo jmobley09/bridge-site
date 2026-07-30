@@ -36,14 +36,6 @@ export default function Home() {
               together, share their strengths, and build steady rhythms of
               connection for students of all ages.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a className="button-primary" href="/contact">
-                Contact us
-              </a>
-              <a className="button-secondary" href="/about">
-                Learn about the co-op
-              </a>
-            </div>
           </div>
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-2xl shadow-black/15">
@@ -77,6 +69,14 @@ export default function Home() {
                 <p>{program}</p>
               </div>
             ))}
+          </div>
+          <div className="homepage-actions">
+            <a className="button-primary" href="/contact">
+              Contact us
+            </a>
+            <a className="button-secondary" href="/about">
+              Learn about the co-op
+            </a>
           </div>
         </div>
       </section>

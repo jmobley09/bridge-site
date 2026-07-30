@@ -224,6 +224,12 @@ img {
   background: linear-gradient(90deg, var(--forest), var(--coral));
 }
 
+.homepage-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
 .info-card,
 .person-card,
 .contact-panel,
