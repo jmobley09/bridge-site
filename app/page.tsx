@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const programs = [
   "Weekly co-op classes and parent-led learning labs",
   "Field trips, nature study days, and service projects",
@@ -47,10 +49,13 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-2xl shadow-black/15">
-              <img
+              <Image
                 alt="Books, art supplies, science materials, and plants on a learning table"
                 className="aspect-[4/3] h-full w-full object-cover"
+                height={900}
+                priority
                 src="/og.png"
+                width={1200}
               />
             </div>
           </div>

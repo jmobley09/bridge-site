@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -48,35 +49,35 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} antialiased`}>
         <header className="site-header">
-          <a className="brand" href="/" aria-label="Bridge Homeschool Co-op home">
+          <Link className="brand" href="/" aria-label="Bridge Homeschool Co-op home">
             <span className="brand-mark" aria-hidden="true">
               B
             </span>
             <span>Bridge Homeschool Co-op</span>
-          </a>
+          </Link>
           <nav aria-label="Main navigation">
             {navItems.map((item) => (
-              <a href={item.href} key={item.href}>
+              <Link href={item.href} key={item.href}>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </header>
         {children}
         <footer className="site-footer">
           <div>
-            <a className="brand" href="/" aria-label="Bridge Homeschool Co-op home">
+            <Link className="brand" href="/" aria-label="Bridge Homeschool Co-op home">
               <span className="brand-mark" aria-hidden="true">
                 B
               </span>
               <span>Bridge Homeschool Co-op</span>
-            </a>
+            </Link>
             <p>Learning together. Growing in community.</p>
           </div>
           <nav aria-label="Footer navigation">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms and Conditions</a>
-            <a href="/contact">Contact</a>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms and Conditions</Link>
+            <Link href="/contact">Contact</Link>
           </nav>
         </footer>
       </body>
