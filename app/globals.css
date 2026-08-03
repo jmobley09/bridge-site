@@ -346,6 +346,45 @@ img {
   gap: 1rem;
 }
 
+.document-hero {
+  padding-bottom: 2rem;
+}
+
+.document-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.6rem;
+}
+
+.document-viewer {
+  margin-inline: auto;
+  max-width: 72rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 18px 45px rgba(23, 35, 29, 0.1);
+}
+
+.document-viewer object {
+  display: block;
+  min-height: 76vh;
+  width: 100%;
+}
+
+.document-viewer p {
+  padding: 2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.document-viewer a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .contact-panel dl {
   margin-top: 1.5rem;
   display: grid;
