@@ -1,24 +1,19 @@
 const boardMembers = [
   {
-    role: "Director",
-    name: "Open Seat",
+    role: "President",
+    name: "Rebecca Mobley",
     focus: "Co-op vision, member experience, and annual planning",
   },
   {
     role: "Secretary",
-    name: "Open Seat",
+    name: "Aimee Jackson",
     focus: "Meeting notes, records, schedules, and member communication",
   },
   {
     role: "Treasurer",
-    name: "Open Seat",
+    name: "Jaime Prince",
     focus: "Budgeting, fees, reimbursements, and financial stewardship",
-  },
-  {
-    role: "Member Care",
-    name: "Open Seat",
-    focus: "New-family onboarding, volunteer coordination, and community needs",
-  },
+  }
 ];
 
 export const metadata = {

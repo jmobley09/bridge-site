@@ -29,14 +29,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Bridge Homeschool Community",
-    description: "Build. Reflect. Inspire. Gather. Explore",
-    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    description: "Build. Reflect. Inspire. Dream. Gather. Explore",
+    images: [{ url: "/bridge-logo.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Bridge Homeschool Community",
-    description: "Build. Reflect. Inspire. Gather. Explore",
-    images: ["/og.png"],
+    description: "Build. Reflect. Inspire. Dream. Gather. Explore",
+    images: ["/bridge-log.jpg"],
   },
 };
 
@@ -51,9 +51,14 @@ export default function RootLayout({
         <header className="site-header">
           <Link className="brand" href="/" aria-label="Bridge Homeschool Community home">
             <span className="brand-mark" aria-hidden="true">
-              B
+              <span className="brand-sun" />
+              <span className="brand-rainbow" />
+              <span className="brand-letter">B</span>
             </span>
-            <span>Bridge Homeschool Community</span>
+            <span className="brand-wordmark">
+              <span className="brand-initials">B.R.I.D.G.E</span>
+              <span className="brand-name">Homeschool Community</span>
+            </span>
           </Link>
           <nav aria-label="Main navigation">
             {navItems.map((item) => (
@@ -68,11 +73,16 @@ export default function RootLayout({
           <div>
             <Link className="brand" href="/" aria-label="Bridge Homeschool Community home">
               <span className="brand-mark" aria-hidden="true">
-                B
+                <span className="brand-sun" />
+                <span className="brand-rainbow" />
+                <span className="brand-letter">B</span>
               </span>
-              <span>Bridge Homeschool Community</span>
+              <span className="brand-wordmark">
+                <span className="brand-initials">B.R.I.D.G.E</span>
+                <span className="brand-name">Homeschool Community</span>
+              </span>
             </Link>
-            <p>Build. Reflect. Inspire. Gather. Explore</p>
+            <p>Build. Reflect. Inspire. Dream. Gather. Explore</p>
           </div>
           <nav aria-label="Footer navigation">
             <Link href="/privacy">Privacy Policy</Link>

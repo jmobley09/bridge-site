@@ -30,14 +30,14 @@ export default function ContactPage() {
               </dd>
             </div>
             <div>
-              <dt>Phone</dt>
+              <dt>Facebook</dt>
               <dd>
-                <a href="tel:+15551234567">(555) 123-4567</a>
+                <a href="https://www.facebook.com/profile.php?id=61562974857103">Bridge FB Page</a>
               </dd>
             </div>
             <div>
               <dt>Location</dt>
-              <dd>Serving local homeschool families</dd>
+              <dd>Danville, WV</dd>
             </div>
           </dl>
         </div>
@@ -49,12 +49,13 @@ export default function ContactPage() {
             frequency varies. Message and data rates may apply.
           </p>
           <p>
+            This service is free of charge and for members only. Please see a board member about signing up
+            if you are interested.
+          </p>
+          <p>
             Reply STOP to opt out or HELP for help. Consent to receive text
             messages is not required for membership.
           </p>
-          <a className="button-primary" href="mailto:bridgehomeschoolcommunity@gmail.com">
-            Ask about membership
-          </a>
         </div>
       </section>
     </main>

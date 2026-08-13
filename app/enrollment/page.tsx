@@ -1,28 +1,24 @@
 export const metadata = {
-  title: "SMS Consent Form | Bridge Homeschool Co-op",
+  title: "Enrollement Form | Bridge Homeschool Co-op",
   description:
-    "View and download the Bridge Homeschool Co-op SMS consent form for A2P messaging enrollment.",
+    "View and download the Bridge Homeschool Enrollement forms",
 };
 
-const pdfPath = "/documents/a2p-communication-enrollment.pdf";
-const docxPath = "/documents/a2p-communication-enrollment.docx";
+const pdfPath = "/documents/Enrollment-Forms-2026.pdf";
 
 export default function SmsConsentPage() {
   return (
     <main className="page-shell">
       <section className="page-hero document-hero">
         <p className="section-kicker">SMS consent</p>
-        <h1>A2P Communication Enrollment Form</h1>
+        <h1>Enrollment Form</h1>
         <p>
-          This page hosts the co-op&apos;s paper SMS consent form for review and
-          download as part of the messaging application process.
+          This page hosts the co-op&apos;s paper enrollement form for review and
+          download. Once filled out, please bring the completed forms to the next in person event or mail them in via standard mail.
         </p>
         <div className="document-actions">
           <a className="button-primary" href={pdfPath} download>
             Download PDF
-          </a>
-          <a className="button-secondary" href={docxPath} download>
-            Download Word document
           </a>
         </div>
       </section>

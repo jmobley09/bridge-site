@@ -23,29 +23,24 @@ export default function Home() {
   return (
     <>
       <section className="hero-section relative overflow-hidden bg-[var(--cream)]">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-12 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:py-16">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--coral)]">
-              Homeschooling in community
-            </p>
-            <h1 className="mt-5 text-5xl font-semibold leading-[0.98] text-[var(--ink)] sm:text-6xl lg:text-7xl">
-              Bridge Homeschool Community
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
+        <div className="mx-auto flex max-w-5xl flex-col items-center px-6 py-12 text-center sm:px-8 lg:py-16">
+          <h1 className="sr-only">Bridge Homeschool Community</h1>
+          <div className="w-full max-w-3xl">
+            <div className="logo-showcase">
+              <span className="logo-spark logo-spark-one" aria-hidden="true" />
+              <span className="logo-spark logo-spark-two" aria-hidden="true" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                alt="Bridge Homeschool Community"
+                className="aspect-[4/3] h-full w-full rounded-[1.4rem] object-cover"
+                src="/bridge_logo.jpg"
+              />
+            </div>
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[var(--muted)] sm:text-base">
               A welcoming parent-led co-op where homeschool families learn
               together, share their strengths, and build steady rhythms of
               connection for students of all ages.
             </p>
-          </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-2xl shadow-black/15">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt="Books, art supplies, science materials, and plants on a learning table"
-                className="aspect-[4/3] h-full w-full object-cover"
-                src="/og.png"
-              />
-            </div>
           </div>
         </div>
         <a className="scroll-cue" href="#what-we-do" aria-label="Scroll to what we do">
