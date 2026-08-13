@@ -15,6 +15,9 @@ export default function EnrollPage() {
           This page hosts the co-op&apos;s paper enrollment form for review and
           download. Once filled out, please bring the completed forms to the next in-person event or mail them in via standard mail.
         </p>
+        <p>
+          Enrollment for the 2026-2027 school year ends on August 21, 2026
+        </p>
         <div className="document-actions">
           <a className="button-primary" href={pdfPath} download>
             Download PDF
