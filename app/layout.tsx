@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import Link from "next/link";
 import { NavLinks } from "./nav-links";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bridgehsc.com"),
@@ -41,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className={`${geistSans.variable} antialiased`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="Bridge Homeschool Community home">
             <span className="brand-mark" aria-hidden="true">
