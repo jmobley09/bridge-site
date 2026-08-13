@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Link from "next/link";
+import { NavLinks } from "./nav-links";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/board", label: "Board" },
-  { href: "/contact", label: "Contact" },
-];
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bridgehsc.com"),
@@ -46,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <body className={`${geistSans.variable} antialiased`} suppressHydrationWarning>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="Bridge Homeschool Community home">
             <span className="brand-mark" aria-hidden="true">
@@ -60,13 +54,7 @@ export default function RootLayout({
               <span className="brand-name">Homeschool Community</span>
             </span>
           </Link>
-          <nav aria-label="Main navigation">
-            {navItems.map((item) => (
-              <Link href={item.href} key={item.href}>
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <NavLinks />
         </header>
         {children}
         <footer className="site-footer">

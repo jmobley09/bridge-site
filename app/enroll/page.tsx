@@ -1,20 +1,19 @@
 export const metadata = {
-  title: "Enrollement Form | Bridge Homeschool Co-op",
+  title: "Enrollment Form | Bridge Homeschool Co-op",
   description:
-    "View and download the Bridge Homeschool Enrollement forms",
+    "View and download the Bridge Homeschool enrollment forms",
 };
 
 const pdfPath = "/documents/Enrollment-Forms-2026.pdf";
 
-export default function SmsConsentPage() {
+export default function EnrollPage() {
   return (
     <main className="page-shell">
       <section className="page-hero document-hero">
-        <p className="section-kicker">SMS consent</p>
         <h1>Enrollment Form</h1>
         <p>
-          This page hosts the co-op&apos;s paper enrollement form for review and
-          download. Once filled out, please bring the completed forms to the next in person event or mail them in via standard mail.
+          This page hosts the co-op&apos;s paper enrollment form for review and
+          download. Once filled out, please bring the completed forms to the next in-person event or mail them in via standard mail.
         </p>
         <div className="document-actions">
           <a className="button-primary" href={pdfPath} download>

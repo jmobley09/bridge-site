@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffaf1;
+  --background: #fff9ed;
   --foreground: #17231d;
   --ink: #17231d;
-  --muted: #526257;
+  --muted: #53655f;
   --forest: #174535;
   --forest-dark: #0d2e24;
   --coral: #e86f54;
   --poppy: #f15b2a;
-  --gold: #d7a642;
+  --gold: #d99a2b;
   --sun: #ffd84f;
   --aqua: #73d2df;
+  --aqua-soft: #d9f5f8;
+  --mint: #a9dfb0;
+  --blush: #ffe0dd;
   --cream: #fff6e6;
-  --sage: #dce9dd;
-  --sky: #d6edf1;
+  --sage: #e3f2df;
+  --sky: #cdeff4;
   --line: rgba(23, 35, 29, 0.14);
+  --play-shadow: rgba(23, 35, 29, 0.18);
 }
 
 @theme inline {
@@ -35,7 +39,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
+  background:
+    linear-gradient(180deg, var(--background) 0%, var(--aqua-soft) 52%, var(--cream) 100%);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
@@ -52,6 +57,23 @@ img {
 .hero-section {
   min-height: calc(100vh - 8rem);
   padding-bottom: 4.5rem;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(115, 210, 223, 0.34) 2px, transparent 2px),
+    linear-gradient(rgba(115, 210, 223, 0.34) 2px, transparent 2px);
+  background-size: 5.5rem 5.5rem;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .scroll-cue {
@@ -181,8 +203,10 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  border-bottom: 1px solid var(--line);
-  background: rgba(255, 250, 241, 0.92);
+  border-bottom: 3px solid var(--ink);
+  background:
+    linear-gradient(90deg, rgba(255, 216, 79, 0.32), rgba(115, 210, 223, 0.36)),
+    rgba(255, 249, 237, 0.94);
   padding: 1rem clamp(1.25rem, 3vw, 3.5rem);
   backdrop-filter: blur(18px);
 }
@@ -200,14 +224,24 @@ img {
 
 .site-header nav a,
 .site-footer nav a {
+  border: 2px solid transparent;
   border-radius: 999px;
   padding: 0.55rem 0.8rem;
 }
 
 .site-header nav a:hover,
 .site-footer nav a:hover {
-  background: rgba(23, 69, 53, 0.08);
-  color: var(--forest);
+  border-color: var(--ink);
+  background: var(--sun);
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.site-header nav a.active {
+  border-color: var(--ink);
+  background: var(--poppy);
+  color: white;
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .brand {
@@ -328,27 +362,45 @@ img {
 }
 
 .button-primary {
-  background: var(--forest);
+  border: 3px solid var(--ink);
+  background: var(--poppy);
   color: white;
-  box-shadow: 0 12px 28px rgba(23, 69, 53, 0.24);
+  box-shadow: 5px 5px 0 var(--ink);
 }
 
 .button-primary:hover {
-  background: var(--forest-dark);
+  background: var(--coral);
+  transform: translate(1px, 1px);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 .button-secondary {
-  border: 1px solid var(--line);
-  background: white;
-  color: var(--forest);
+  border: 3px solid var(--ink);
+  background: var(--sun);
+  color: var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.button-secondary:hover {
+  background: var(--aqua);
+  transform: translate(1px, 1px);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 .section-kicker {
-  color: var(--coral);
+  width: max-content;
+  max-width: 100%;
+  border: 0;
+  border-left: 0.45rem solid var(--poppy);
+  background: transparent;
+  color: var(--poppy);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.18em;
+  line-height: 1;
+  padding: 0.15rem 0 0.15rem 0.65rem;
   text-transform: uppercase;
+  box-shadow: none;
 }
 
 .section-title,
@@ -371,9 +423,10 @@ img {
 .person-card,
 .contact-panel,
 .list-panel {
-  border: 1px solid var(--line);
+  border: 3px solid var(--ink);
   border-radius: 8px;
-  background: white;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 6px 6px 0 var(--play-shadow);
 }
 
 .feature-card {
@@ -391,7 +444,15 @@ img {
   width: 3rem;
   margin-bottom: 1.15rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--forest), var(--coral));
+  background: linear-gradient(90deg, var(--poppy), var(--sun), var(--aqua));
+}
+
+.feature-card:nth-child(2n) {
+  background: var(--blush);
+}
+
+.feature-card:nth-child(3n) {
+  background: var(--aqua-soft);
 }
 
 .homepage-actions {
@@ -430,7 +491,20 @@ img {
 
 .page-shell,
 .legal-shell {
+  min-height: calc(100vh - 5rem);
   padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.page-shell {
+  background:
+    linear-gradient(135deg, rgba(255, 216, 79, 0.18), transparent 38%),
+    linear-gradient(315deg, rgba(115, 210, 223, 0.24), transparent 42%),
+    var(--cream);
+}
+
+.legal-shell {
+  background:
+    linear-gradient(180deg, var(--cream), var(--aqua-soft));
 }
 
 .page-hero,
@@ -443,7 +517,18 @@ img {
 }
 
 .page-hero {
+  position: relative;
   padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.page-hero::after {
+  content: "";
+  display: block;
+  width: min(12rem, 44vw);
+  height: 0.5rem;
+  margin-top: 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--poppy), var(--sun), var(--aqua), var(--mint));
 }
 
 .page-hero h1 {
@@ -467,19 +552,25 @@ img {
 }
 
 .list-panel {
-  background: var(--sky);
+  background:
+    linear-gradient(135deg, rgba(255, 216, 79, 0.28), transparent 45%),
+    var(--cream);
+  background-size: 2.8rem 2.8rem;
 }
 
 .list-panel p {
   margin: 0;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(23, 35, 29, 0.12);
+  border-bottom: 0;
+  border-left: 0.35rem solid var(--aqua);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.84);
   color: var(--ink);
   font-weight: 650;
+  padding: 1rem;
 }
 
-.list-panel p:last-child {
-  border-bottom: 0;
+.list-panel p + p {
+  margin-top: 0.8rem;
 }
 
 .board-grid {
@@ -492,19 +583,34 @@ img {
   min-height: 18rem;
 }
 
+.person-card:nth-child(1) {
+  background: var(--aqua-soft);
+}
+
+.person-card:nth-child(2) {
+  background: var(--blush);
+}
+
+.person-card:nth-child(3) {
+  background: var(--sage);
+}
+
 .avatar {
   display: grid;
   height: 4rem;
   width: 4rem;
   place-items: center;
-  border-radius: 50%;
-  background: var(--sage);
-  color: var(--forest);
+  border: 3px solid var(--ink);
+  border-radius: 1rem;
+  background: var(--sun);
+  color: var(--ink);
   font-weight: 850;
+  box-shadow: 4px 4px 0 var(--ink);
+  transform: rotate(-3deg);
 }
 
 .person-role {
-  color: var(--coral) !important;
+  color: var(--poppy) !important;
   font-size: 0.76rem;
   font-weight: 850;
   letter-spacing: 0.16em;
@@ -531,10 +637,10 @@ img {
   margin-inline: auto;
   max-width: 72rem;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 3px solid var(--ink);
   border-radius: 8px;
-  background: white;
-  box-shadow: 0 18px 45px rgba(23, 35, 29, 0.1);
+  background: var(--aqua-soft);
+  box-shadow: 8px 8px 0 var(--ink);
 }
 
 .document-viewer object {
@@ -562,7 +668,7 @@ img {
 }
 
 .contact-panel dt {
-  color: var(--muted);
+  color: var(--poppy);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -577,14 +683,16 @@ img {
 
 .contact-panel dd a,
 .legal-shell a {
-  color: var(--forest);
+  color: var(--poppy);
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.18em;
 }
 
 .contact-panel.accent {
-  background: var(--forest-dark);
+  background:
+    linear-gradient(135deg, rgba(255, 216, 79, 0.18), transparent 38%),
+    var(--ink);
   color: white;
 }
 
@@ -595,11 +703,12 @@ img {
 
 .contact-panel.accent .button-primary {
   margin-top: 1.4rem;
-  background: var(--coral);
+  background: var(--poppy);
 }
 
 .legal-shell {
   max-width: 54rem;
+  border-inline: 3px solid rgba(23, 35, 29, 0.08);
 }
 
 .legal-shell h1 {
@@ -612,7 +721,7 @@ img {
 }
 
 .legal-date {
-  color: var(--coral) !important;
+  color: var(--poppy) !important;
   font-weight: 750;
 }
 
@@ -622,8 +731,10 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
-  border-top: 1px solid var(--line);
-  background: white;
+  border-top: 3px solid var(--ink);
+  background:
+    linear-gradient(90deg, rgba(115, 210, 223, 0.28), rgba(255, 216, 79, 0.28)),
+    white;
   padding: 2.5rem clamp(1.25rem, 4vw, 3.5rem);
 }
 
